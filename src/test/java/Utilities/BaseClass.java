@@ -3,18 +3,18 @@ package Utilities;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 
-public class BasePage {
+public class BaseClass extends Driver{
 
 
 
     @BeforeClass
-    public void setup(){
+    public static void setup(){
 
         Driver.Initialize();
     }
 
     @AfterClass
-    public void cleanup(){
+    public static void cleanup(){
 
         Driver.close();
     }
