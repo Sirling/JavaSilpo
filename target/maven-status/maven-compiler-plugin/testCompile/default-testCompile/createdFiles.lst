@@ -1,6 +1,12 @@
 config\configuration.class
-Utilities\BaseClass.class
 Utilities\Driver.class
-config\configuration$Browser.class
+TestSuites\HomePageTests.class
 config\configuration$url.class
-TestCases\firstTest.class
+Utilities\BaseClass.class
+Pages\LoginPage.class
+Pages\BasePage.class
+Pages\HomePage.class
+config\Locators.class
+Pages\OffersPage.class
+TestRunner.class
+config\configuration$Browser.class

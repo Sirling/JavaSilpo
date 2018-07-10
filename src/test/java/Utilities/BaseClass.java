@@ -1,19 +1,20 @@
 package Utilities;
 
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
+import Pages.BasePage;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 
 public class BaseClass extends Driver{
 
 
 
-    @BeforeClass
+    @BeforeTest
     public static void setup(){
 
-        Driver.Initialize();
+        BasePage.openHomePage();
     }
 
-    @AfterClass
+    @AfterTest
     public static void cleanup(){
 
         Driver.close();

@@ -10,13 +10,15 @@ import java.util.concurrent.TimeUnit;
 
 public class Driver {
 
-    public static WebDriver Instance = null;
+    private static WebDriver Instance = null;
 
-    public static void Initialize() {
+    public static WebDriver getInstance() {
         if(Instance == null) {
             System.out.println("Initializing Utilities.Driver");
-            if (configuration.Browser.browser.equalsIgnoreCase("ff"))
+            if (configuration.Browser.browser.equalsIgnoreCase("ff")) {
+                System.setProperty("webdriver.gecko.driver", "./src/main/resources/drivers/geckodriver.exe");
                 Instance = new FirefoxDriver();
+            }
 
             else if (configuration.Browser.browser.equalsIgnoreCase("op")) {
                 System.setProperty("webdriver.opera.driver", "./src/main/resources/drivers/operadriver.exe");
@@ -26,10 +28,12 @@ public class Driver {
                 System.setProperty("webdriver.chrome.driver", "./src/main/resources/drivers/chromedriver.exe");
                 Instance = new ChromeDriver();
             }
+
+            Instance.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+            Instance.manage().window().maximize();
         }
 
-        Instance.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        Instance.manage().window().maximize();
+        return Instance;
     }
 
     public static void close(){

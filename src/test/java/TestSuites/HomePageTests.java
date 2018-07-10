@@ -3,24 +3,24 @@ package TestSuites;
 import Pages.BasePage;
 import Pages.HomePage;
 import Pages.LoginPage;
+import Pages.OffersPage;
 import Utilities.BaseClass;
 import config.Locators;
-import org.junit.Test;
-
+import org.testng.annotations.Test;
 
 
 public class HomePageTests extends BaseClass {
 
     @Test
-    public void authentification() throws InterruptedException{
+    public void authentication() {
 
-        BasePage.open();
-        HomePage.authForm();
-        LoginPage.enterBarcode()
-
-        Thread.sleep(5000);
-
+            HomePage.authForm();
+            LoginPage.enterBarcode(LoginPage.barcode)
+                    .enterPassword(LoginPage.password)
+                    .submitForm();
+            assert (BasePage.getUserShortName().equals(Locators.userShortNameText));
     }
+
 
 
 }

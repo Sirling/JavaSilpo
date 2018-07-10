@@ -3,6 +3,8 @@ package Pages;
 import Utilities.Driver;
 import config.Locators;
 
+import java.util.NoSuchElementException;
+
 public class LoginPage extends BasePage {
 
     public static String barcode = "1087289826";
@@ -10,28 +12,33 @@ public class LoginPage extends BasePage {
 
     public static LoginPage enterBarcode(String barcode){
 
-        Driver.Instance.findElement(Locators.enterBarcode)
+        Driver.getInstance().findElement(Locators.enterBarcode)
                 .sendKeys(barcode);
         return new LoginPage();
     }
 
     public LoginPage enterPassword(String password){
 
-        Driver.Instance.findElement(Locators.enterPassword)
+        Driver.getInstance().findElement(Locators.enterPassword)
                 .sendKeys(password);
         return this;
     }
-    public LoginPage submitForm(){
+    public HomePage submitForm(){
 
-        Driver.Instance.findElement(Locators.submitButton).click();
-        return this;
+        Driver.getInstance().findElement(Locators.submitButton).click();
+        return new HomePage();
     }
 
     public static HomePage login(){
-        HomePage.authForm();
-        LoginPage.enterBarcode(barcode)
-                .enterPassword(password)
-                .submitForm();
+
+        try {
+            HomePage.authForm();
+            LoginPage.enterBarcode(barcode)
+                    .enterPassword(password)
+                    .submitForm();
+        } catch (NoSuchElementException e) {
+            e.printStackTrace();
+        }
         return new HomePage();
     }
 
