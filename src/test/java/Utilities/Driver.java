@@ -38,12 +38,12 @@ public class Driver {
 
     public static void close(){
         System.out.println("Closing browser");
-        Instance.close();
+        getInstance().close();
         Instance = null;
     }
     public static void quit() {
         System.out.println("Quiting browser");
-        Instance.close();
+        getInstance().close();
         Instance = null;
     }
 }

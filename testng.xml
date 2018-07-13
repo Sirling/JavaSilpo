@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Work/Projects/Silpo_Java">
+        <classes>
+            <class name="TestSuites.DefaultPageTests">
+            <methods>
+                <include name="ALL"/>
+                <!--<include name="sideMenuLinkOffers"/>-->
+                <!--<include name="sideMenuLinkAbout"/>-->
+                <!--<include name="sideMenuLinkStores"/>-->
+                <!--<include name="sideMenuLinkFAQ"/>-->
+                <!--<include name="sideMenuLinkWork"/>-->
+                <!--<include name="sideMenuLinkContacts"/>-->
+                <!--<include name="footerOffersLink"/>-->
+                <!--<include name="footerAboutLink"/>-->
+                <!--<include name="footerFAQLink"/>-->
+                <!--<include name="footerStoresLink"/>-->
+                <!--<include name="footerContactsLink"/>-->
+                <!--<include name="footerCinaTizhnya"/>-->
+                <!--<include name="footerAkciyiVlasnogoImportu"/>-->
+                <!--<include name="footerDityachiTizhni"/>-->
+                <!--<include name="footerNeobhidniLyudyamObekti"/>-->
+                <!--<include name="footerOtherOffers"/>-->
+                <!--<include name="footerOwnProduction"/>-->
+                <!--<include name="footerPersonalAccount"/>-->
+                <!--<include name="footerOurFriends"/>-->
+                <!--<include name="footerOurGuests"/>-->
+                <!--<include name="footerPressCenter"/>-->
+                <!--<include name="footerEvents"/>-->
+            </methods>
+            </class>
+        </classes>
+    </test>
+    <listeners>
+        <listener class-name="config.RetryListener"/>
+    </listeners>
+</suite>

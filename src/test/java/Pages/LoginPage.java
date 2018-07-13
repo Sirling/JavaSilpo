@@ -32,7 +32,7 @@ public class LoginPage extends BasePage {
     public static HomePage login(){
 
         try {
-            HomePage.authForm();
+            DefaultPage.authForm();
             LoginPage.enterBarcode(barcode)
                     .enterPassword(password)
                     .submitForm();
