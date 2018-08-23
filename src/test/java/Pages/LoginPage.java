@@ -1,31 +1,30 @@
 package Pages;
 
 import Utilities.Driver;
-import config.Locators;
-
+import config.LocatorsDefaultPage;
 import java.util.NoSuchElementException;
+
 
 public class LoginPage extends BasePage {
 
-    public static String barcode = "1087289826";
-    public static String password = "5374";
+
 
     public static LoginPage enterBarcode(String barcode){
 
-        Driver.getInstance().findElement(Locators.enterBarcode)
+        Driver.getInstance().findElement(LocatorsDefaultPage.enterBarcode)
                 .sendKeys(barcode);
         return new LoginPage();
     }
 
     public LoginPage enterPassword(String password){
 
-        Driver.getInstance().findElement(Locators.enterPassword)
+        Driver.getInstance().findElement(LocatorsDefaultPage.enterPassword)
                 .sendKeys(password);
         return this;
     }
     public HomePage submitForm(){
 
-        Driver.getInstance().findElement(Locators.submitButton).click();
+        Driver.getInstance().findElement(LocatorsDefaultPage.submitButton).click();
         return new HomePage();
     }
 
@@ -33,13 +32,12 @@ public class LoginPage extends BasePage {
 
         try {
             DefaultPage.authForm();
-            LoginPage.enterBarcode(barcode)
-                    .enterPassword(password)
+            LoginPage.enterBarcode(LocatorsDefaultPage.barcode)
+                    .enterPassword(LocatorsDefaultPage.password)
                     .submitForm();
         } catch (NoSuchElementException e) {
             e.printStackTrace();
         }
         return new HomePage();
     }
-
 }

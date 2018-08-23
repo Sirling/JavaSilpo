@@ -1,13 +1,15 @@
 package Pages;
 
 import Utilities.Driver;
-import config.Locators;
+import config.LocatorsDefaultPage;
+
+import java.util.ArrayList;
 
 public class DefaultPage extends BasePage {
 
     public static LoginPage authForm(){
 
-        Driver.getInstance().findElement(Locators.authFormButton).click();
+        Driver.getInstance().findElement(LocatorsDefaultPage.authFormButton).click();
         return new LoginPage();
     }
 
@@ -15,7 +17,7 @@ public class DefaultPage extends BasePage {
     public static BasePage sideMenuOffersPageLinkClick(){
 
         try {
-            BasePage.waitForElementIsClickable(Locators.offersSideMenuLink).click();
+            BasePage.waitForElementIsClickable(LocatorsDefaultPage.offersSideMenuLink).click();
             Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -26,7 +28,7 @@ public class DefaultPage extends BasePage {
     public static BasePage sideMenuAboutPageLinkClick(){
 
         try {
-            BasePage.waitForElementIsClickable(Locators.aboutSideMenuLink).click();
+            BasePage.waitForElementIsClickable(LocatorsDefaultPage.aboutSideMenuLink).click();
             Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -37,7 +39,7 @@ public class DefaultPage extends BasePage {
     public static BasePage sideMenuStoresPageLinkClick(){
 
         try {
-            BasePage.waitForElementIsClickable(Locators.storesSideMenuLink).click();
+            BasePage.waitForElementIsClickable(LocatorsDefaultPage.storesSideMenuLink).click();
             Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -48,7 +50,7 @@ public class DefaultPage extends BasePage {
     public static BasePage sideMenuFaqPageLinkClick(){
 
         try {
-            BasePage.waitForElementIsClickable(Locators.faqSideMenuLink).click();
+            BasePage.waitForElementIsClickable(LocatorsDefaultPage.faqSideMenuLink).click();
             Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -59,7 +61,7 @@ public class DefaultPage extends BasePage {
     public static BasePage sideMenuWorkPageLinkClick(){
 
         try {
-            BasePage.waitForElementIsClickable(Locators.workSideMenuLink).click();
+            BasePage.waitForElementIsClickable(LocatorsDefaultPage.workSideMenuLink).click();
             Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -70,7 +72,7 @@ public class DefaultPage extends BasePage {
     public static BasePage sideMenuContactsPageLinkClick(){
 
         try {
-            BasePage.waitForElementIsClickable(Locators.contactsSideMenuLink).click();
+            BasePage.waitForElementIsClickable(LocatorsDefaultPage.contactsSideMenuLink).click();
             Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -84,7 +86,7 @@ public class DefaultPage extends BasePage {
 
         try {
             scrollToFooter();
-            BasePage.waitForElementIsClickable(Locators.footerOffersLink).click();
+            BasePage.waitForElementIsClickable(LocatorsDefaultPage.footerOffersLink).click();
             Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -96,7 +98,7 @@ public class DefaultPage extends BasePage {
 
         try {
             scrollToFooter();
-            BasePage.waitForElementIsClickable(Locators.footerAboutLink).click();
+            BasePage.waitForElementIsClickable(LocatorsDefaultPage.footerAboutLink).click();
             Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -108,7 +110,7 @@ public class DefaultPage extends BasePage {
 
         try {
             scrollToFooter();
-            BasePage.waitForElementIsClickable(Locators.footerFaqLink).click();
+            BasePage.waitForElementIsClickable(LocatorsDefaultPage.footerFaqLink).click();
             Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -120,7 +122,7 @@ public class DefaultPage extends BasePage {
 
         try {
             scrollToFooter();
-            BasePage.waitForElementIsClickable(Locators.footerStoresLink).click();
+            BasePage.waitForElementIsClickable(LocatorsDefaultPage.footerStoresLink).click();
             Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -131,7 +133,7 @@ public class DefaultPage extends BasePage {
 
         try {
             scrollToFooter();
-            BasePage.waitForElementIsClickable(Locators.footerContactsLink).click();
+            BasePage.waitForElementIsClickable(LocatorsDefaultPage.footerContactsLink).click();
             Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -145,7 +147,7 @@ public class DefaultPage extends BasePage {
 
         try {
             scrollToFooter();
-            BasePage.waitForElementIsClickable(Locators.footerCinaTizhnya).click();
+            BasePage.waitForElementIsClickable(LocatorsDefaultPage.footerCinaTizhnya).click();
             Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -157,7 +159,7 @@ public class DefaultPage extends BasePage {
 
         try {
             scrollToFooter();
-            BasePage.waitForElementIsClickable(Locators.footerAkciyiVlasnogoImportu).click();
+            BasePage.waitForElementIsClickable(LocatorsDefaultPage.footerAkciyiVlasnogoImportu).click();
             Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -169,7 +171,7 @@ public class DefaultPage extends BasePage {
 
         try {
             scrollToFooter();
-            BasePage.waitForElementIsClickable(Locators.footerDityachiTizhni).click();
+            BasePage.waitForElementIsClickable(LocatorsDefaultPage.footerDityachiTizhni).click();
             Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -180,7 +182,7 @@ public class DefaultPage extends BasePage {
 
         try {
             scrollToFooter();
-            BasePage.waitForElementIsClickable(Locators.footerNeobhidniLyudyamObekti).click();
+            BasePage.waitForElementIsClickable(LocatorsDefaultPage.footerNeobhidniLyudyamObekti).click();
             Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -191,7 +193,7 @@ public class DefaultPage extends BasePage {
 
         try {
             scrollToFooter();
-            BasePage.waitForElementIsClickable(Locators.footerOtherOffers).click();
+            BasePage.waitForElementIsClickable(LocatorsDefaultPage.footerOtherOffers).click();
             Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -203,7 +205,7 @@ public class DefaultPage extends BasePage {
 
         try {
             scrollToFooter();
-            BasePage.waitForElementIsClickable(Locators.footerOwnProduction).click();
+            BasePage.waitForElementIsClickable(LocatorsDefaultPage.footerOwnProduction).click();
             Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -214,7 +216,7 @@ public class DefaultPage extends BasePage {
 
         try {
             scrollToFooter();
-            BasePage.waitForElementIsClickable(Locators.footerPersonalAccount).click();
+            BasePage.waitForElementIsClickable(LocatorsDefaultPage.footerPersonalAccount).click();
             Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -225,7 +227,7 @@ public class DefaultPage extends BasePage {
 
         try {
             scrollToFooter();
-            BasePage.waitForElementIsClickable(Locators.footerOurFriends).click();
+            BasePage.waitForElementIsClickable(LocatorsDefaultPage.footerOurFriends).click();
             Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -236,7 +238,7 @@ public class DefaultPage extends BasePage {
 
         try {
             scrollToFooter();
-            BasePage.waitForElementIsClickable(Locators.footerOurGuests).click();
+            BasePage.waitForElementIsClickable(LocatorsDefaultPage.footerOurGuests).click();
             Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -247,7 +249,7 @@ public class DefaultPage extends BasePage {
 
         try {
             scrollToFooter();
-            BasePage.waitForElementIsClickable(Locators.footerPressCenter).click();
+            BasePage.waitForElementIsClickable(LocatorsDefaultPage.footerPressCenter).click();
             Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -258,11 +260,24 @@ public class DefaultPage extends BasePage {
 
         try {
             scrollToFooter();
-            BasePage.waitForElementIsClickable(Locators.footerEvents).click();
+            BasePage.waitForElementIsClickable(LocatorsDefaultPage.footerEvents).click();
             Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
         return new EventsPage();
+    }
+
+    public static void facebookLink() {
+
+        try {
+            Driver.getInstance().findElement(LocatorsDefaultPage.facebookLink).click();
+            Thread.sleep(3000);
+            ArrayList<String> windows = new ArrayList<>(Driver.getInstance().getWindowHandles());
+//            Driver.getInstance().close();
+            Driver.getInstance().switchTo().window(windows.get(1));
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }

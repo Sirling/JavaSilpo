@@ -2,10 +2,13 @@ package config;
 
 import org.openqa.selenium.By;
 
-public class Locators {
+public class LocatorsDefaultPage {
+
+    public static String barcode = "1087289826";
+    public static String password = "5374";
 
     //Side menu locators
-    public static By offersSideMenuLink = By.cssSelector(".menu__nav a:nth-child(1)");
+    public static By offersSideMenuLink = By.cssSelector("");
     public static By aboutSideMenuLink = By.cssSelector(".menu__nav a:nth-child(2)");
     public static By storesSideMenuLink = By.cssSelector(".menu__nav a:nth-child(3)");
     public static By faqSideMenuLink = By.cssSelector(".menu__nav a:nth-child(4)");
@@ -45,8 +48,9 @@ public class Locators {
     public static By footerPressCenter = By.cssSelector(".dtcell:nth-of-type(2) li:nth-child(5) > a");
     public static By footerEvents = By.cssSelector(".dtcell:nth-of-type(2) li:nth-child(6) > a");
 
+    //Below side menu
+    static public By facebookLink = By.cssSelector(".facebook-link");
 
     public static By copyrights = By.cssSelector(".copyrights");
-
 
 }

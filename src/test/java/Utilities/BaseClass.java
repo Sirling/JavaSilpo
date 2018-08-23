@@ -1,20 +1,20 @@
 package Utilities;
 
-import Pages.BasePage;
+import Pages.DefaultPage;
+import config.configuration.url;
 import org.testng.annotations.*;
 
 public class BaseClass extends Driver{
 
-
-    @BeforeMethod
-    public static void setup(){
-
-        BasePage.openHomePage();
-    }
+//    @BeforeMethod
+//    public static void setup(){
+//
+//        DefaultPage.openPage(url.homePage);
+//    }
 
     @AfterMethod
     public static void cleanup() {
 
-        Driver.close();
+        Driver.quit();
     }
 }

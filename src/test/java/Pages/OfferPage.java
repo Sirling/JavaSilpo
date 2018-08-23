@@ -1,4 +1,9 @@
 package Pages;
 
-public class OfferPage extends BasePage {
+import config.LocatorsOffersPage;
+
+public class OfferPage extends OffersPage {
+
+
+
 }

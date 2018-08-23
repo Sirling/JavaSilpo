@@ -43,7 +43,12 @@ public class Driver {
     }
     public static void quit() {
         System.out.println("Quiting browser");
-        getInstance().close();
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        getInstance().quit();
         Instance = null;
     }
 }

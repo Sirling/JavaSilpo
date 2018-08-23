@@ -4,35 +4,15 @@
     <test verbose="2" preserve-order="true" name="C:/Work/Projects/Silpo_Java">
         <classes>
             <class name="TestSuites.DefaultPageTests">
-            <methods>
-                <include name="ALL"/>
-                <!--<include name="sideMenuLinkOffers"/>-->
-                <!--<include name="sideMenuLinkAbout"/>-->
-                <!--<include name="sideMenuLinkStores"/>-->
-                <!--<include name="sideMenuLinkFAQ"/>-->
-                <!--<include name="sideMenuLinkWork"/>-->
-                <!--<include name="sideMenuLinkContacts"/>-->
-                <!--<include name="footerOffersLink"/>-->
-                <!--<include name="footerAboutLink"/>-->
-                <!--<include name="footerFAQLink"/>-->
-                <!--<include name="footerStoresLink"/>-->
-                <!--<include name="footerContactsLink"/>-->
-                <!--<include name="footerCinaTizhnya"/>-->
-                <!--<include name="footerAkciyiVlasnogoImportu"/>-->
-                <!--<include name="footerDityachiTizhni"/>-->
-                <!--<include name="footerNeobhidniLyudyamObekti"/>-->
-                <!--<include name="footerOtherOffers"/>-->
-                <!--<include name="footerOwnProduction"/>-->
-                <!--<include name="footerPersonalAccount"/>-->
-                <!--<include name="footerOurFriends"/>-->
-                <!--<include name="footerOurGuests"/>-->
-                <!--<include name="footerPressCenter"/>-->
-                <!--<include name="footerEvents"/>-->
-            </methods>
+                <methods>
+                    <include name=".*"/>
+                    <exclude name=".*sideMenuFacebookLink.*"/>
+                </methods>
             </class>
         </classes>
     </test>
     <listeners>
-        <listener class-name="config.RetryListener"/>
+        <listener class-name="Utilities.RetryListener"/>
+        <listener class-name="Utilities.TestListener"/>
     </listeners>
 </suite>
